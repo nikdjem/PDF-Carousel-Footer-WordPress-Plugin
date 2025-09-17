@@ -1,0 +1,137 @@
+/**
+ * PDF Carousel Footer - Styles
+ * 
+ * @package PDF_Carousel_Footer
+ * @version 1.0.0
+ */
+
+/* PDF Carousel Container */
+.pcf-pdf-carousel {
+    position: relative;
+}
+
+/* Individual Slide Styling */
+.pcf-pdf-carousel .pcf-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Thumbnail Link Styling */
+.pcf-pdf-carousel .pcf-thumb-link {
+    display: inline-block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.pcf-pdf-carousel .pcf-thumb-link:hover {
+    opacity: 0.8;
+}
+
+/* Canvas Thumbnail Styling */
+.pcf-pdf-carousel canvas {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Slick Carousel Navigation Arrows */
+.pcf-pdf-carousel .slick-prev {
+    left: 132px;
+    z-index: 2;
+}
+
+.pcf-pdf-carousel .slick-next {
+    right: 142px;
+    z-index: 2;
+}
+
+.pcf-pdf-carousel .slick-prev,
+.pcf-pdf-carousel .slick-next {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Show arrows when enabled from admin panel */
+.pcf-pdf-carousel.slick-slider .slick-prev,
+.pcf-pdf-carousel.slick-slider .slick-next {
+    display: block;
+}
+
+/* Hide arrows when disabled from admin panel */
+.pcf-pdf-carousel.slick-slider.no-arrows .slick-prev,
+.pcf-pdf-carousel.slick-slider.no-arrows .slick-next {
+    display: none !important;
+}
+
+/* Center the carousel content between arrows */
+.pcf-pdf-carousel .slick-list {
+    margin: 0 30px;
+}
+
+/* Remove any gaps between slides */
+.pcf-pdf-carousel .slick-slide {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure slides take full width and no empty spaces */
+.pcf-pdf-carousel .slick-track {
+    display: flex;
+    align-items: center;
+}
+
+/* Remove any default spacing that might cause empty frames */
+.pcf-pdf-carousel .slick-slide > div {
+    width: 100%;
+    height: 100%;
+}
+
+/* Fallback Link Styling */
+.pcf-thumb-fallback {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.pcf-thumb-fallback a {
+    color: #0073aa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pcf-thumb-fallback a:hover {
+    text-decoration: underline;
+}
+
+/* Notice Styling */
+.pcf-notice {
+    padding: 15px;
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    color: #856404;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pcf-pdf-carousel .slick-prev {
+        left: -10px;
+    }
+    
+    .pcf-pdf-carousel .slick-next {
+        right: -10px;
+    }
+    
+    .pcf-pdf-carousel .pcf-slide {
+        padding: 5px;
+    }
+}
